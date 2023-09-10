@@ -38,18 +38,5 @@
             "type": "parameter",
             "replaces": "Param_RootNamespace"
         }
-    },
-    "postActions": [
-        {
-            "description": "Add nuget package",
-            "manualInstructions": [],
-            "actionId": "0B814718-16A3-4F7F-89F1-69C0F9170EAD",
-            "args": {
-                "packageId": "CommunityToolkit.WinUI.Controls.SettingsControls",
-                "version": "8.0.230828-rc",
-                "projectPath": "Param_ProjectName\\Param_ProjectName.csproj"
-            },
-            "continueOnError": true
-        }
-    ]
+    }
 }
