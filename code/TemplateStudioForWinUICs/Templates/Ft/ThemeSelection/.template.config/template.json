@@ -15,13 +15,15 @@
         "ts.frontendframework": "all",
         "ts.platform": "WinUI",
         "ts.appmodel": "Desktop",
+        "ts.outputToParent": "true",
         "ts.version": "1.0.0",
         "ts.displayOrder": "1",
         "ts.group": "UserInteraction",
         "ts.multipleInstance": "false",
         "ts.genGroup": "0",
         "ts.dependencies": "ts.WinUI.Feat.SettingsStorage",
-        "ts.rightClickEnabled": "true"
+        "ts.rightClickEnabled": "true",
+        "ts.licenses": "[CommunityToolkit.WinUI.Controls.SettingsControls](https://www.nuget.org/packages/CommunityToolkit.WinUI.Controls.SettingsControls/8.0.230828-rc/License)"
     },
     "sourceName": "ThemeSelectionFeature",
     "preferNameDirectory": true,
@@ -34,9 +36,27 @@
         }
     ],
     "symbols": {
+        "ts.projectName": {
+            "type": "parameter",
+            "replaces": "Param_ProjectName",
+            "fileRename": "Param_ProjectName"
+        },
         "ts.rootNamespace": {
             "type": "parameter",
             "replaces": "Param_RootNamespace"
         }
-    }
+    },
+    "postActions": [
+        {
+            "description": "Add nuget package",
+            "manualInstructions": [],
+            "actionId": "0B814718-16A3-4F7F-89F1-69C0F9170EAD",
+            "args": {
+                "packageId": "CommunityToolkit.WinUI.Controls.SettingsControls",
+                "version": "8.0.230828-rc",
+                "projectPath": "Param_ProjectName\\Param_ProjectName.csproj"
+            },
+            "continueOnError": true
+        }
+    ]
 }
