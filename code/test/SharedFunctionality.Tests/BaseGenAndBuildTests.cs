@@ -186,8 +186,6 @@ namespace Microsoft.Templates.Test
             try
             {
                 //// Doing this here rather than as a part of the downloading & checking for new templates flow
-                //var scanResult = CodeGen.Instance.Scanner.Scan(mountpoint);
-                //return scanResult.Templates;
                 var scanResult = Task.Run(async () => await CodeGen.Instance.Scanner.ScanAsync(mountpoint)).Result;
 
                 var list = new List<ITemplateInfo>();
